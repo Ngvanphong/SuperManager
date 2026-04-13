@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "AssetActionUtility.h"
 #include "AssetActionUtility.h"
+#include "EditorUtilityBlueprint.h"
 #include "QuickAssetAction.generated.h"
 
 /**
@@ -19,6 +20,20 @@ public:
 	UFUNCTION(CallInEditor)
 	void DuplicateAssets(int32 NumOfDuplicates);
 
+	UFUNCTION(CallInEditor)
+	void AddPrefix();
+
+	UFUNCTION(CallInEditor)
+	void RemoveUnuseAssets();
+
+private:
+	TMap<UClass*, FString> PrefixMap=
+		{
+			{UBlueprint::StaticClass(),TEXT("BP_")},
+			{UQuickAssetAction::StaticClass(),TEXT("BP_")},
+			{UEditorUtilityBlueprint::StaticClass(),TEXT("BP_")},
+
+		};
 	
 	
 };
