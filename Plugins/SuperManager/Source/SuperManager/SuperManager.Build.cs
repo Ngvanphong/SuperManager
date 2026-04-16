@@ -39,6 +39,9 @@ public class SuperManager : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
+				"AssetRegistry",
+				"AssetTools",
+				"ContentBrowser"
 				
 				// ... add private dependencies that you statically link with here ...	
 			}

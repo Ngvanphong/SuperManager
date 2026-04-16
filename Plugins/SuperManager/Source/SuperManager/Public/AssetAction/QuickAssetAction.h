@@ -25,6 +25,8 @@ public:
 
 	UFUNCTION(CallInEditor)
 	void RemoveUnuseAssets();
+	
+	
 
 private:
 	TMap<UClass*, FString> PrefixMap=
@@ -35,5 +37,6 @@ private:
 
 		};
 	
+	void FixUpRedirector();
 	
 };
